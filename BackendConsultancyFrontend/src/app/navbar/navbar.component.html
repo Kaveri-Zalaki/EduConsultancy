@@ -1,0 +1,76 @@
+
+<mat-toolbar>
+    <h1 class="logo me-auto"><a ><mat-icon>eco</mat-icon><span>Edu</span>Consultancy</a></h1>
+
+    <div class = "spacer"></div>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a routerLink="" class="active">Home</a></li>
+
+          <li class="dropdown"><a ><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a routerLink="aboutus">About Us</a></li>
+              <li><a routerLink = "team">Team</a></li>
+              <li><a routerLink = "testinomials">Testimonials</a></li>
+            </ul>
+          </li>
+
+          <li><a routerLink="products">Product</a></li>
+                     
+          <li><a routerLink = "blogs">Blogs</a></li>
+          
+          <li><a routerLink= "contactus">Contact</a></li>
+
+          <li class="dropdown"><a > <span>Accounts</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="nav-item" *ngIf="showAdminBoard">
+                <a  routerLink="admin">Admin Board</a>
+              </li>
+
+              <li class="nav-item" *ngIf="showModeratorBoard">
+                <a routerLink="mod">Moderator Board</a>
+              </li>
+
+              <li class="nav-item">
+                <a  *ngIf="isLoggedIn" routerLink="user">User</a>
+              </li>
+            </ul>
+        
+            <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+              <li class="nav-item">
+                <a  routerLink="register">Sign Up</a>
+              </li>
+
+              <li class="nav-item">
+                <a  routerLink="login">Login</a>
+              </li>
+            
+            </ul>
+        
+            <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+              <li class="nav-item">
+                <a  routerLink="profile">{{ username }}</a>
+              </li>
+              <li class="nav-item">
+                <a  routerLink = "/login" (click)="logout()">LogOut</a>
+              </li>
+            </ul>
+            
+          </li>
+
+          <li><a routerLink = "feedback">Feedback</a></li>
+
+          <div class="header-social-links d-flex">
+            <a  ><i ><mat-icon>facebook</mat-icon></i></a>
+            <a ><i ><mat-icon>email</mat-icon></i></a>
+            <a ><i ><mat-icon>call</mat-icon></i></a>
+            <a ><i ></i></a>
+            <a ><i ></i></a>
+            
+          </div>
+
+        </ul>
+      </nav>
+    </mat-toolbar>
+

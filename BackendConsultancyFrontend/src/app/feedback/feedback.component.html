@@ -1,0 +1,35 @@
+<img src="https://www.peopletactics.com/wp-content/uploads/feedback-1.jpg" width="1000px" height="190px" align = "center"> <br><br>
+
+
+<div class="container">
+    <div class="row mt-5 justify-content-center" data-aos="fade-up" >
+      <div class="col-lg-8">
+        <h1 align = "center">Feedback Form</h1>
+          <form
+      name="form" 
+      #f="ngForm"
+      (ngSubmit) = "responseformsubmit()">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control"  placeholder="Your Name" required [(ngModel)] ="form.name" #name="ngModel">
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email"  placeholder="Your Email" required [(ngModel)] ="form.emailId" #emailId = "ngModel">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="phoneNumber"  placeholder="Phone Number" required [(ngModel)] ="form.phoneNumber" #phoneNumber = "ngModel">
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="feedback" rows="5" placeholder="FeedBack" required [(ngModel)] ="form.feedback" #feedback = "ngModel"></textarea><br>
+            </div>
+
+            <div class="text-center">
+            <button style="background-color: green; color: black;"   class="btn btn-primary btn-block">
+              Send FeedBack..!
+            </button><br><br><br>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>

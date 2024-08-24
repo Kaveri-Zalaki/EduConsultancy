@@ -1,0 +1,70 @@
+<div class="map-section">
+  <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14018.615574343308!2d77.18823166982534!3d28.550121067716734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2127da1cf23%3A0xd89ebc21c669134d!2sHauz%20Khas%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1642496943469!5m2!1sen!2sin"></iframe>
+</div>
+
+<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="row justify-content-center" data-aos="fade-up">
+
+        <div class="col-lg-10">
+
+          <div class="info-wrap">
+            <div class="row">
+              <div class="col-lg-4 info">
+                <i><mat-icon>place</mat-icon></i>
+                <h4>Location:</h4>
+                <p>Hauz Khas <br>New Delhi, 110016 India</p>
+              </div>
+
+              <div class="col-lg-4 info mt-4 mt-lg-0">
+                <i><mat-icon> email </mat-icon></i>
+                <h4>Email:</h4>
+                <p>educonsultancy@gmail.com</p>
+              </div>
+
+              <div class="col-lg-4 info mt-4 mt-lg-0">
+                <i><mat-icon> call </mat-icon></i>
+                <h4>Call: </h4>
+                <p>+91 8340 5681 04</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row mt-5 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10">
+          <form
+      name="form"
+      #f="ngForm"
+      (ngSubmit) = "responseformsubmit()">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control"  placeholder="Your Name" required [(ngModel)] ="form.name" #name="ngModel">
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email"  placeholder="Your Email" required [(ngModel)] ="form.emailId" #emailId = "ngModel">
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject"  placeholder="Subject" required [(ngModel)] ="form.subject" #subject = "ngModel">
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required [(ngModel)] ="form.message" #message = "ngModel"></textarea><br>
+            </div>
+
+            <div class="text-center">
+            <button class="btn btn-primary btn-block">
+              Send Message
+            </button><br><br><br>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
