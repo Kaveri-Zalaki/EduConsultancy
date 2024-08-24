@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\KAVERI\Downloads\cgi-final-projects-spartans-master\Backend-EduConsultancy\.metadata\.plugins\org.eclipse.jdt.core
+3340322792.index
